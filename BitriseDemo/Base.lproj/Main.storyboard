@@ -18,21 +18,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Bitrise!! Continuous Integration" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wx-TU-eh4">
-                                <rect key="frame" x="168.5" y="269" width="263" height="62.5"/>
+                                <rect key="frame" x="168" y="269" width="263" height="62.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="0.1928170919418335" green="0.76809591054916382" blue="0.63797199726104736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="pikachu" translatesAutoresizingMaskIntoConstraints="NO" id="BfI-Oj-NDH">
+                                <rect key="frame" x="300" y="300" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7V3-W4-ESe"/>
+                                    <constraint firstAttribute="height" constant="300" id="dq0-KO-L1I"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.508689284324646" green="0.30550122261047363" blue="0.66711914539337158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="BfI-Oj-NDH" secondAttribute="bottom" id="Lgp-wZ-hGU"/>
+                            <constraint firstItem="BfI-Oj-NDH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="W3f-Pf-io0"/>
                             <constraint firstItem="9Wx-TU-eh4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yjq-ce-YD0"/>
+                            <constraint firstAttribute="trailing" secondItem="BfI-Oj-NDH" secondAttribute="trailing" id="hev-Mh-Icd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BfI-Oj-NDH" secondAttribute="bottom" id="mtq-Nc-YKb"/>
+                            <constraint firstItem="BfI-Oj-NDH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sa7-C2-Ec1"/>
+                            <constraint firstAttribute="trailing" secondItem="BfI-Oj-NDH" secondAttribute="trailing" id="saJ-9Y-Auu"/>
                             <constraint firstItem="9Wx-TU-eh4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z0M-8W-Iqv"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Lgp-wZ-hGU"/>
+                                <exclude reference="W3f-Pf-io0"/>
+                                <exclude reference="sa7-C2-Ec1"/>
+                                <exclude reference="saJ-9Y-Auu"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="pikachu" width="1280" height="1280"/>
+    </resources>
 </document>
