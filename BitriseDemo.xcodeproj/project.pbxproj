@@ -216,6 +216,7 @@
 				TargetAttributes = {
 					050593B81C86F9C4001B4B25 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = C94AX2R986;
 					};
 					05758FAF1C881B59003F26F4 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -465,6 +466,7 @@
 			baseConfigurationReference = B2998485CB8C54663B13603B /* Pods-BitriseDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = BitriseDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -478,6 +480,7 @@
 			baseConfigurationReference = 45A899C5E1294E5A834911D9 /* Pods-BitriseDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = BitriseDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
