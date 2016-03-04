@@ -11,6 +11,11 @@ sudo gem install fastlane
 fastlane ios test
 ```
 Runs all the tests
+### ios build_number
+```
+fastlane ios build_number
+```
+Bumping build number
 
 ----
 
