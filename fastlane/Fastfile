@@ -24,7 +24,6 @@ platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
     # cocoapods
-    increment_build_number
   end
 
   desc "Runs all the tests"
@@ -32,13 +31,19 @@ platform :ios do
     scan
   end
 
+  desc "Bumping build number"
+  lane :build_number do
+    increment_build_number
+  end
+
   after_all do |lane|
-    # Bumping build numbe
+    # Bumping build number
     build = get_build_number(xcodeproj: "BitriseDemo.xcodeproj")
     commit_version_bump(
      message: "Bump to build #{build}",
      force: true
     )
+    push_to_git_remote
 
     # slack(
     #   message: "Successfully deployed new App Update."
