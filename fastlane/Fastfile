@@ -35,10 +35,10 @@ platform :ios do
   after_all do |lane|
     # Bumping build numbe
     build = get_build_number(xcodeproj: "BitriseDemo.xcodeproj")
-    
-    #commit_version_bump(
-    #  message: "Bump to build #{build}"
-    #)
+    commit_version_bump(
+     message: "Bump to build #{build}",
+     force: true
+    )
 
     # slack(
     #   message: "Successfully deployed new App Update."
