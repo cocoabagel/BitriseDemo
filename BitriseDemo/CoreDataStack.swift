@@ -62,7 +62,7 @@ public class CoreDataStack {
         mainContext.parentContext = self.rootContext
         mainContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "mainContextDidSave:", name: NSManagedObjectContextDidSaveNotification, object: mainContext)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CoreDataStack.mainContextDidSave(_:)), name: NSManagedObjectContextDidSaveNotification, object: mainContext)
         
         return mainContext
     }()
