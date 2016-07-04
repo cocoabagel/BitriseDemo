@@ -177,13 +177,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 050593CB1C86F9C4001B4B25 /* Build configuration list for PBXNativeTarget "BitriseDemo" */;
 			buildPhases = (
-				170F438FB8B422BDFD8CF969 /* 📦 Check Pods Manifest.lock */,
+				170F438FB8B422BDFD8CF969 /* [CP] Check Pods Manifest.lock */,
 				050593B51C86F9C4001B4B25 /* Sources */,
 				050593B61C86F9C4001B4B25 /* Frameworks */,
 				050593B71C86F9C4001B4B25 /* Resources */,
 				05C4836E1C8821F900864154 /* ShellScript */,
-				8C8FDD82F4D0BA2826297FE2 /* 📦 Embed Pods Frameworks */,
-				35AF1119995EEE9221B25052 /* 📦 Copy Pods Resources */,
+				8C8FDD82F4D0BA2826297FE2 /* [CP] Embed Pods Frameworks */,
+				35AF1119995EEE9221B25052 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,12 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05758FB71C881B59003F26F4 /* Build configuration list for PBXNativeTarget "BitriseDemoTests" */;
 			buildPhases = (
-				1EA25D7B6B3101B072ADDA6E /* 📦 Check Pods Manifest.lock */,
+				1EA25D7B6B3101B072ADDA6E /* [CP] Check Pods Manifest.lock */,
 				05758FAC1C881B59003F26F4 /* Sources */,
 				05758FAD1C881B59003F26F4 /* Frameworks */,
 				05758FAE1C881B59003F26F4 /* Resources */,
-				D2F1BBECC0D899EBAC888FD9 /* 📦 Embed Pods Frameworks */,
-				929102E9B29CDA4A985C9642 /* 📦 Copy Pods Resources */,
+				D2F1BBECC0D899EBAC888FD9 /* [CP] Embed Pods Frameworks */,
+				929102E9B29CDA4A985C9642 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,14 +288,14 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 6b326635316828bb3960d7e9a9f3f85ce4b80eca e5a72684ac7390327e1b3bc023c43cabf235892c12a48e61009f13ff79150912";
 		};
-		170F438FB8B422BDFD8CF969 /* 📦 Check Pods Manifest.lock */ = {
+		170F438FB8B422BDFD8CF969 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,14 +303,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		1EA25D7B6B3101B072ADDA6E /* 📦 Check Pods Manifest.lock */ = {
+		1EA25D7B6B3101B072ADDA6E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,14 +318,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		35AF1119995EEE9221B25052 /* 📦 Copy Pods Resources */ = {
+		35AF1119995EEE9221B25052 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,14 +333,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitriseDemo/Pods-BitriseDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8C8FDD82F4D0BA2826297FE2 /* 📦 Embed Pods Frameworks */ = {
+		8C8FDD82F4D0BA2826297FE2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,14 +348,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitriseDemo/Pods-BitriseDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		929102E9B29CDA4A985C9642 /* 📦 Copy Pods Resources */ = {
+		929102E9B29CDA4A985C9642 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,14 +363,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitriseDemoTests/Pods-BitriseDemoTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D2F1BBECC0D899EBAC888FD9 /* 📦 Embed Pods Frameworks */ = {
+		D2F1BBECC0D899EBAC888FD9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
