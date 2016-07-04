@@ -31,13 +31,13 @@ class UserServiceTests: XCTestCase {
     
     func testRootContextIsSavedAfterAddingUser() {
         
-        expectationForNotification(NSManagedObjectContextDidSaveNotification, object: coreDataStack.rootContext) { notification in
+        expectation(forNotification: NSNotification.Name.NSManagedObjectContextDidSave.rawValue, object: coreDataStack.rootContext) { notification in
             return true
         }
         
-        userService.addUser("Joel Armstrong", phoneNumber: "123-456-7890")
+        let _ = userService.addUser("Joel Armstrong", phoneNumber: "123-456-7890")
         
-        waitForExpectationsWithTimeout(2.0){ error in
+        waitForExpectations(withTimeout: 2.0){ error in
             XCTAssertNil(error, "Save did not occur")
         }
         
@@ -61,7 +61,7 @@ class UserServiceTests: XCTestCase {
     
     func testGetUser() {
         
-        userService.addUser("Joel Armstrong", phoneNumber: "123-456-7890")
+        let _ = userService.addUser("Joel Armstrong", phoneNumber: "123-456-7890")
         
         let user = userService.getUser("Joel Armstrong")
         
@@ -70,7 +70,7 @@ class UserServiceTests: XCTestCase {
     
     func testDeleteUser() {
         
-        userService.addUser("Joel Armstrong", phoneNumber: "123-456-7890")
+        let _ = userService.addUser("Joel Armstrong", phoneNumber: "123-456-7890")
         
         var fetchedUser = userService.getUser("Joel Armstrong")
         
