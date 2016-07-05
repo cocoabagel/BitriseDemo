@@ -35,7 +35,7 @@ class UserServiceTests: XCTestCase {
             return true
         }
         
-        let _ = userService.addUser("Joel Armstrong", phoneNumber: "123-456-7890")
+        userService.addUser("Joel Armstrong", phoneNumber: "123-456-7890")
         
         waitForExpectations(withTimeout: 2.0){ error in
             XCTAssertNil(error, "Save did not occur")
@@ -61,7 +61,7 @@ class UserServiceTests: XCTestCase {
     
     func testGetUser() {
         
-        let _ = userService.addUser("Joel Armstrong", phoneNumber: "123-456-7890")
+        userService.addUser("Joel Armstrong", phoneNumber: "123-456-7890")
         
         let user = userService.getUser("Joel Armstrong")
         
@@ -70,7 +70,7 @@ class UserServiceTests: XCTestCase {
     
     func testDeleteUser() {
         
-        let _ = userService.addUser("Joel Armstrong", phoneNumber: "123-456-7890")
+        userService.addUser("Joel Armstrong", phoneNumber: "123-456-7890")
         
         var fetchedUser = userService.getUser("Joel Armstrong")
         

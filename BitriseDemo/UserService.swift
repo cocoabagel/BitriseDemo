@@ -18,6 +18,7 @@ public class UserService {
         self.coreDataStack = coreDataStack
     }
     
+    @discardableResult
     public func addUser(_ name: String, phoneNumber: String) -> User? {
         let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: managedObjectContext) as! User
         user.fullName = name
