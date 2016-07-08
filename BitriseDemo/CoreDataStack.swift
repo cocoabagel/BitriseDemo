@@ -16,11 +16,11 @@ public class CoreDataStack {
     }
     
     deinit {
-        NotificationCenter.default().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     public var managedObjectModel: NSManagedObjectModel = {
-        var modelPath = Bundle.main().pathForResource("BitriseDemo", ofType: "momd")
+        var modelPath = Bundle.main.pathForResource("BitriseDemo", ofType: "momd")
         var modelURL = URL(fileURLWithPath: modelPath!)
         var model = NSManagedObjectModel(contentsOf: modelURL)!
         
@@ -28,7 +28,7 @@ public class CoreDataStack {
     }()
     
     var applicationDocumentsDirectory: URL = {
-        let urls = FileManager.default().urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)
+        let urls = FileManager.default.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)
         return urls[urls.count-1] as URL
     }()
     
@@ -62,7 +62,7 @@ public class CoreDataStack {
         mainContext.parent = self.rootContext
         mainContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         
-        NotificationCenter.default().addObserver(self, selector: #selector(CoreDataStack.mainContextDidSave(_:)), name: NSNotification.Name.NSManagedObjectContextDidSave, object: mainContext)
+        NotificationCenter.default.addObserver(self, selector: #selector(CoreDataStack.mainContextDidSave(_:)), name: NSNotification.Name.NSManagedObjectContextDidSave, object: mainContext)
         
         return mainContext
     }()
