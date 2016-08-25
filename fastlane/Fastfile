@@ -38,7 +38,7 @@ platform :ios do
 
   desc "Setup Carthage"
   lane :setup_carthage do
-    carthage(command: "update")
+    carthage(command: "update", platform: "iOS")
   end
 
   lane :setup_library do
