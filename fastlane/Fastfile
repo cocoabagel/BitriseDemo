@@ -36,13 +36,23 @@ platform :ios do
     increment_build_number
   end
 
+  desc "Setup Carthage"
+  lane :setup_carthage do
+    carthage(command: "update", platform: "iOS")
+  end
+
+  lane :setup_library do
+    cocoapods
+    carthage
+  end
+
   after_all do |lane|
     # Bumping build number
-    build = get_build_number(xcodeproj: "BitriseDemo.xcodeproj")
-    commit_version_bump(
-     message: "Bump to build #{build}",
-     force: true
-    )
+    # build = get_build_number(xcodeproj: "BitriseDemo.xcodeproj")
+    # commit_version_bump(
+    #  message: "Bump to build #{build}",
+    #  force: true
+    # )
     # push_to_git_remote
 
     # slack(

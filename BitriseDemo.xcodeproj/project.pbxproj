@@ -21,6 +21,7 @@
 		05758FC31C881D69003F26F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05758FC11C881D69003F26F4 /* User.swift */; };
 		2C1783F33CECFE7D4622C38E /* Pods_BitriseDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CECD99C20233413464B1E1 /* Pods_BitriseDemoTests.framework */; };
 		54B1D32B572538762913E851 /* Pods_BitriseDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825487348223B2C32B3AC644 /* Pods_BitriseDemo.framework */; };
+		AAFAFF751D6B20EC00E59943 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFAFF741D6B20EC00E59943 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		712E3F2CC68110183D391915 /* Pods-BitriseDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitriseDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitriseDemoTests/Pods-BitriseDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		825487348223B2C32B3AC644 /* Pods_BitriseDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitriseDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA1C98585B3DC4C19817981 /* Pods-BitriseDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitriseDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitriseDemo/Pods-BitriseDemo.release.xcconfig"; sourceTree = "<group>"; };
+		AAFAFF741D6B20EC00E59943 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54B1D32B572538762913E851 /* Pods_BitriseDemo.framework in Frameworks */,
+				AAFAFF751D6B20EC00E59943 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +156,7 @@
 		3D3B85C348D980D339ED1CC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AAFAFF741D6B20EC00E59943 /* Alamofire.framework */,
 				825487348223B2C32B3AC644 /* Pods_BitriseDemo.framework */,
 				01CECD99C20233413464B1E1 /* Pods_BitriseDemoTests.framework */,
 			);
@@ -184,6 +188,7 @@
 				05C4836E1C8821F900864154 /* ShellScript */,
 				8C8FDD82F4D0BA2826297FE2 /* [CP] Embed Pods Frameworks */,
 				35AF1119995EEE9221B25052 /* [CP] Copy Pods Resources */,
+				AAFAFF761D6B212700E59943 /* Embed Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,15 +227,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Kazutoshi Baba";
 				TargetAttributes = {
 					050593B81C86F9C4001B4B25 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = C94AX2R986;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 					05758FAF1C881B59003F26F4 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 050593B81C86F9C4001B4B25;
 					};
 				};
@@ -362,6 +370,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitriseDemoTests/Pods-BitriseDemoTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		AAFAFF761D6B212700E59943 /* Embed Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = "Embed Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		D2F1BBECC0D899EBAC888FD9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -525,10 +548,18 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = C94AX2R986;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BitriseDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoabagel.BitriseDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "df061d17-6f7c-4401-ad0b-1c576c20865f";
+				PROVISIONING_PROFILE_SPECIFIER = "BitriseDemo Development";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -539,12 +570,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = C94AX2R986;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BitriseDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoabagel.BitriseDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bd5d42d8-085b-4672-83de-580b04e0a2ee";
+				PROVISIONING_PROFILE_SPECIFIER = "BitriseDemo AdHoc";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -560,6 +601,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoabagel.BitriseDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitriseDemo.app/BitriseDemo";
 			};
 			name = Debug;
@@ -574,6 +616,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoabagel.BitriseDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitriseDemo.app/BitriseDemo";
 			};
 			name = Release;
