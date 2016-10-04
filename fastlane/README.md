@@ -20,7 +20,7 @@ Bumping build number
 ```
 fastlane ios setup_carthage
 ```
-Runs Carthage
+Setup Carthage
 ### ios setup_library
 ```
 fastlane ios setup_library
