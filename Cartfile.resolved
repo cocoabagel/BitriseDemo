@@ -1,1 +1,2 @@
-github "Alamofire/Alamofire" "3cc5b4e8453bec9fd6b973d60e6b0605a38e4cf4"
+github "Alamofire/Alamofire" "4.4.0"
+github "SwiftyJSON/SwiftyJSON" "3.1.4"
